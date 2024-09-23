@@ -5,18 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neko Image Fetcher</title>
   <link rel="stylesheet" href="style.css">
+  <script type="module" src="main.js"></script>
+
 </head>
 <body>
   <div class="container">
     <h1>Neko Image</h1>
-    <button id="fetchNekoBtn">Get Image</button>
+    <label for="breedSelect">Choose a breed:</label>
+    <select id="breedSelect">
+      <!-- <option value="random">Random</option> -->
+     
+    </select>
+
+    <button id="fetchBreedBtn">Get Neko Image</button>
+
+    <!-- Display fetched image -->
     <div id="nekoContainer">
       <img id="nekoImage" alt="Neko Image" style="display:none;">
+      <button id="favoriteBtn" style="display:none;">Favorite</button>
     </div>
-  </div>
 
-  <script type="module" src="main.js"></script>
+    <h2>Your Favorite Nekos</h2>
+    <div id="favoritesContainer"></div>
 
-  
+  </div>    
 </body>
 </html>

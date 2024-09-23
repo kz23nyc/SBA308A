@@ -1,7 +1,13 @@
-// api.js
-export async function fetchNekoImage() {
+
+
+export async function fetchNekoImage(breed = 'random') {
     try {
-      const response = await fetch('https://nekos.best/api/v2/neko');
+      // Modify the URL to fetch based on breed if it's not 'random'
+      const apiUrl = breed === 'random' 
+        ? 'https://nekos.best/api/v2/neko' 
+        : `https://nekos.best/api/v2/neko/${breed}`;
+        
+      const response = await fetch(apiUrl);
       const data = await response.json();
       return data.results[0].url;  // Return the image URL
     } catch (error) {

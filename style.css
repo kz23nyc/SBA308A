@@ -17,3 +17,8 @@ body {
     max-width: 300px;
   }
   
+  #favoritesContainer img {
+    max-width: 100px;
+    margin: 10px;
+  }
+  
